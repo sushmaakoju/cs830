@@ -1,0 +1,74 @@
+# Generated from ./cnf/clausal_form.g4 by ANTLR 4.13.2
+from antlr4 import *
+from io import StringIO
+import sys
+if sys.version_info[1] > 5:
+    from typing import TextIO
+else:
+    from typing.io import TextIO
+
+
+def serializedATN():
+    return [
+        4,0,9,59,6,-1,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,
+        6,7,6,2,7,7,7,2,8,7,8,2,9,7,9,1,0,1,0,1,1,1,1,1,2,1,2,1,3,1,3,1,
+        4,1,4,1,5,1,5,5,5,34,8,5,10,5,12,5,37,9,5,1,6,1,6,5,6,41,8,6,10,
+        6,12,6,44,9,6,1,7,1,7,1,8,4,8,49,8,8,11,8,12,8,50,1,9,4,9,54,8,9,
+        11,9,12,9,55,1,9,1,9,0,0,10,1,1,3,2,5,3,7,4,9,0,11,5,13,6,15,7,17,
+        8,19,9,1,0,5,1,0,65,90,1,0,97,122,1,0,48,57,2,0,10,10,13,13,2,0,
+        9,9,32,32,61,0,1,1,0,0,0,0,3,1,0,0,0,0,5,1,0,0,0,0,7,1,0,0,0,0,11,
+        1,0,0,0,0,13,1,0,0,0,0,15,1,0,0,0,0,17,1,0,0,0,0,19,1,0,0,0,1,21,
+        1,0,0,0,3,23,1,0,0,0,5,25,1,0,0,0,7,27,1,0,0,0,9,29,1,0,0,0,11,31,
+        1,0,0,0,13,38,1,0,0,0,15,45,1,0,0,0,17,48,1,0,0,0,19,53,1,0,0,0,
+        21,22,5,44,0,0,22,2,1,0,0,0,23,24,5,40,0,0,24,4,1,0,0,0,25,26,5,
+        41,0,0,26,6,1,0,0,0,27,28,3,9,4,0,28,8,1,0,0,0,29,30,5,45,0,0,30,
+        10,1,0,0,0,31,35,7,0,0,0,32,34,7,1,0,0,33,32,1,0,0,0,34,37,1,0,0,
+        0,35,33,1,0,0,0,35,36,1,0,0,0,36,12,1,0,0,0,37,35,1,0,0,0,38,42,
+        7,1,0,0,39,41,7,2,0,0,40,39,1,0,0,0,41,44,1,0,0,0,42,40,1,0,0,0,
+        42,43,1,0,0,0,43,14,1,0,0,0,44,42,1,0,0,0,45,46,5,124,0,0,46,16,
+        1,0,0,0,47,49,7,3,0,0,48,47,1,0,0,0,49,50,1,0,0,0,50,48,1,0,0,0,
+        50,51,1,0,0,0,51,18,1,0,0,0,52,54,7,4,0,0,53,52,1,0,0,0,54,55,1,
+        0,0,0,55,53,1,0,0,0,55,56,1,0,0,0,56,57,1,0,0,0,57,58,6,9,0,0,58,
+        20,1,0,0,0,5,0,35,42,50,55,1,6,0,0
+    ]
+
+class clausal_formLexer(Lexer):
+
+    atn = ATNDeserializer().deserialize(serializedATN())
+
+    decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
+
+    T__0 = 1
+    LPAREN = 2
+    RPAREN = 3
+    NOT = 4
+    CAPS_PRED_FUNC = 5
+    VARIABLE_LOWER = 6
+    CONJ = 7
+    ENDLINE = 8
+    WHITESPACE = 9
+
+    channelNames = [ u"DEFAULT_TOKEN_CHANNEL", u"HIDDEN" ]
+
+    modeNames = [ "DEFAULT_MODE" ]
+
+    literalNames = [ "<INVALID>",
+            "','", "'('", "')'", "'|'" ]
+
+    symbolicNames = [ "<INVALID>",
+            "LPAREN", "RPAREN", "NOT", "CAPS_PRED_FUNC", "VARIABLE_LOWER", 
+            "CONJ", "ENDLINE", "WHITESPACE" ]
+
+    ruleNames = [ "T__0", "LPAREN", "RPAREN", "NOT", "MINUS", "CAPS_PRED_FUNC", 
+                  "VARIABLE_LOWER", "CONJ", "ENDLINE", "WHITESPACE" ]
+
+    grammarFileName = "clausal_form.g4"
+
+    def __init__(self, input=None, output:TextIO = sys.stdout):
+        super().__init__(input, output)
+        self.checkVersion("4.13.2")
+        self._interp = LexerATNSimulator(self, self.atn, self.decisionsToDFA, PredictionContextCache())
+        self._actions = None
+        self._predicates = None
+
+

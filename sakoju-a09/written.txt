@@ -1,0 +1,33 @@
+CS 830 Intro to AI, Spring 2025
+        Written Assignments, Sushma Akoju
+Assignment 9
+
+1) Describe any implementation choices you made that you felt were important. Clearly explain any aspects of your program that aren’t working. Mention anything else that we should know when evaluating your work.
+
+I have two implementations for value iteration. One implementation directly fills in the Utility function values. The other implementation goes over each state, action pair and finds a next state, probability and applies the same formula.
+The input formats are way too many variations. I previously implemented a numpy matrix format for the value iterations which is easier (but applies transformations). But to port the input formats to relevant numerical formats and then fill in matrices for numpy, seemed like a herculean task even though I did not choose this third method. 
+
+My laptop charger port got damaged on Saturday and some of the work was on my laptop but I could not retrieve it. I had that repaired and informed the Dean of Students as well as the Professor. I was assigned a temporary desktop this morning at 11am. 
+
+In addition to this challenge, the desktop I was assigned does not have superuser permissions. I had edited it manually in the nano editor. I wrote the entire code today in the morning from scratch. 
+
+Despite aforementioned challenges, I have implemented my code and yes might give errors.
+
+Value Iteration: it works ok but it has bugs as I have 2 implementations. My output does show 11 states for standard.mdp but mdp-tester says it cannot see 11 states. I don’t know why I could not debug it as I am just 45 mins away from the submission deadline for this assignment.
+Value iterations seems to work on sample.mdp and standard.mdp as those were the only two files that I have gotten a chance to test.
+
+But it seems to give some output. I did not test rtdp and am sure there are likely some minor bugs (since I hand edited the code without any code completion tools or any developer environment due to aforementioned situation.).
+
+Roughly I guess both algorithms pseudo code seems fine and I followed the same as in the textbook and Reinforcement Learning textbook (that I used for the class last semester).
+
+2) What can you say about the time and space complexity of your program?
+
+The time complexity is expected to be O(|S|^2 |A|) per each iteration. 
+Space complexity for value iteration O(|S|), where S is stated, A are actions in the Markov Decision Process (MDP). We update the values function for each state. And then we consider all possible next states and actions. So it has to be |S|^2 |A|.
+Number of iterations can be exponential in the size of state space.
+
+For RTDP since we use Bellman equations, time complexity is a polynomial in the number of states and actions. The visited number of states may increase and space complexity could be impacted. Bellman updates for shortest path require N-1 iterations which is maximum length of shortest path, where N is total number of nodes/vertices). 
+
+3) What suggestions do you have for improving this assignment in the future?
+
+The input could be processed as a numpy matrix however the inputs we get in all of the assignments are vastly different and none of them are reusable for next or future assignment for 95% of assignments so far. I think we end up spending more time understanding the input than the algorithm and exploring various ways to plan the implementations.

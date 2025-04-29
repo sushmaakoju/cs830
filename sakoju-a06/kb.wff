@@ -1,0 +1,8 @@
+all x gardener(x) -> loves(x, Sun)
+all x gardener(x) -> hates(x, Snow)
+all x protects(x,garden(x))
+all x plays(x,child(x))
+all x gardener(x,garden(x))
+all x rain(garden(x)) -> destroy(garden(x))
+--- negated query ---
+rain(protects(x, garden(x)))

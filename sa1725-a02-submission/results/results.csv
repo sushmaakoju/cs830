@@ -1,0 +1,7 @@
+algorithm,file_path,rows,columns,expanded_nodes,generated_nodes,path_length,elapsed_time
+dfs,/home/csg/sa1725/sakoju/worlds/test1.vw,3,4,20,8,42,0.4811286926269531
+dfs,/home/csg/sa1725/sakoju/worlds/tiny-1.vw,3,4,6,6,16,0.19288063049316406
+dfs,/home/csg/sa1725/sakoju/worlds/tiny-2.vw,3,4,22,19,61,0.6084442138671875
+dfs,/home/csg/sa1725/sakoju/worlds/small-1.vw,10,10,217,122,625,34.36684608459473
+dfs,/home/csg/sa1725/sakoju/worlds/hard-1.vw,20,40,1124,366,2997,973.6192226409912
+dfs,/home/csg/sa1725/sakoju/worlds/hard-2.vw,40,75,8216,2854,21054,32808.998584747314

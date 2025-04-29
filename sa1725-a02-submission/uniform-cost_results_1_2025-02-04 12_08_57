@@ -1,0 +1,2 @@
+algorithm,file_path,rows,columns,heuristic,expanded_nodes,generated_nodes,path_length,elapsed_time
+uniform-cost,,1,4,1,0,0,0,0.011682510375976562
